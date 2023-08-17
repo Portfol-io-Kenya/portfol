@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:8800/api-v1";
+const API_URL = "https://portfol-y6vp.onrender.com/api-v1";
+//https://portfol-y6vp.onrender.com/
 
 export const API = axios.create({
   baseURL: API_URL,
@@ -28,7 +29,7 @@ export const apiRequest = async ({ url, token, data, method }) => {
 export const handleFileUpload = async (uploadFile) => {
   const formData = new FormData();
   formData.append("file", uploadFile);
-  formData.append("upload_preset", "jobfinder");
+  formData.append("upload_preset", "portfolio");
 
   try {
     const response = await axios.post(
