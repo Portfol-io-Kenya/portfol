@@ -31,6 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("dev"));
 
+// routes
 app.use(router);
 
 //error middleware

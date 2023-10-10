@@ -33,6 +33,16 @@ const userSchema = new mongoose.Schema(
     cvUrl: { type: String },
     jobTitle: { type: String },
     about: { type: String },
+    role: { 
+      type: String, 
+      enum: ['admin', 'superadmin', 'seeker', 'giver'],
+      default: "seeker" 
+    },
+    verified: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   { timestamps: true }
 );
