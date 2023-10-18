@@ -1,4 +1,4 @@
-require('dotenv').config();
+import {} from 'dotenv/config'
 
 const environment = process.env.APP_ENVIRONMENT;
 
@@ -8,4 +8,4 @@ const developerLog = (...logMessages) => {
 	}
 };
 
-export default { developerLog };
+export default developerLog;

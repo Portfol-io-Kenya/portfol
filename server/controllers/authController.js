@@ -1,9 +1,8 @@
 import Users from "../models/userModel.js";
-import { UserVerificationToken } from '../models/auth';
-const { sendEmail } = require('.');
+import UserVerificationToken from '../models/auth.js';
+import sendEmail from "./index.js"
 
 const VerificationToken = async ({ userId, token }) => {
-
 	const newVerificationToken = new UserVerificationToken({
 		userId: userId,
 		token: token,

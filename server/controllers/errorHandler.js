@@ -1,5 +1,5 @@
 require('dotenv').config();
-import { developerLog } from './logging';
+import { developerLog } from './logging.js';
 
 const environment = process.env.APP_ENVIRONMENT;
 

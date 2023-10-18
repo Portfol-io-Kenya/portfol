@@ -1,9 +1,8 @@
-require('dotenv').config();
+import {} from 'dotenv/config'
 import { createTransport } from 'nodemailer';
-import { handleError } from './errorHandler';
-import { developerLog } from './logging';
+import developerLog from './logging.js';
 
-const Index = () => true;
+export const Index = () => true;
 
 const sendEmail = async function (email, subject, message) {
 	//developerLog("process.env.SMTP_SERVER =", process.env.SMTP_SERVER);
@@ -35,7 +34,5 @@ const sendEmail = async function (email, subject, message) {
 		});
 };
 
-export default {
-	Index,
-	sendEmail,
-};
+export default sendEmail;
+

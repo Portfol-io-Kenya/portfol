@@ -14,4 +14,4 @@ const userVerificationTokenSchema = new Schema({
 
 const UserVerificationToken = model('UserVerificationToken', userVerificationTokenSchema);
 
-export default { UserVerificationToken };
+export default UserVerificationToken;
